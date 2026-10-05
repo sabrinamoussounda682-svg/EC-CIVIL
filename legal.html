@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="EC-Civil — Conditions générales d'utilisation et politique de confidentialité. République du Congo.">
+<meta name="theme-color" content="#1a7a3c">
+<title>Documents légaux — EC-Civil</title>
+<link rel="icon" type="image/webp" href="assets/img/logo.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a href="#contenu" class="skip-link">Aller au contenu</a>
+
+<!-- NAVBAR -->
+<nav class="navbar" role="navigation" aria-label="Navigation principale">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand" aria-label="EC-Civil — Accueil">
+      <img src="assets/img/logo.webp" alt="Logo EC-Civil">
+      <div class="nav-brand-text">
+        <span class="nav-brand-title">EC-Civil</span>
+        <span class="nav-brand-sub">République du Congo</span>
+      </div>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Menu">
+      <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+    <ul class="nav-links" id="navLinks" role="list">
+      <li><a href="index.html#fonctionnement">Fonctionnement</a></li>
+      <li><a href="index.html#tarifs">Tarifs</a></li>
+      <li><a href="index.html#securite">Sécurité</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li><a href="legal.html" class="btn-nav active">Documents légaux</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="tricolor"></div>
+
+<!-- EN-TÊTE PAGE -->
+<div style="background:linear-gradient(135deg,var(--encre),#1a3a25); padding:48px 0 40px;">
+  <div class="container">
+    <p style="font-size:0.75rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--or);margin-bottom:10px;">Documents officiels</p>
+    <h1 style="font-size:clamp(1.6rem,3vw,2.4rem);font-weight:800;color:#fff;letter-spacing:-0.02em;margin-bottom:10px;">Cadre légal d'EC-Civil</h1>
+    <p style="font-size:0.95rem;color:rgba(255,255,255,0.6);max-width:520px;">
+      Consultez ici les conditions générales d'utilisation et la politique de confidentialité qui régissent l'utilisation de l'application EC-Civil.
+    </p>
+  </div>
+</div>
+
+<div class="tricolor"></div>
+
+<!-- CONTENU LÉGAL -->
+<section id="contenu" style="padding:48px 0 72px;">
+  <div class="container">
+
+    <!-- Onglets -->
+    <div class="docs-nav" role="tablist">
+      <button class="doc-btn active" id="btn-cgu" role="tab" aria-selected="true" aria-controls="doc-cgu" onclick="showDoc('cgu')">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="16" height="16"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+        Conditions d'utilisation
+      </button>
+      <button class="doc-btn" id="btn-confidentialite" role="tab" aria-selected="false" aria-controls="doc-confidentialite" onclick="showDoc('confidentialite')">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="16" height="16"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+        Politique de confidentialité
+      </button>
+    </div>
+
+    <!-- ════════════════════════════════════════ -->
+    <!-- PANEL : CGU                             -->
+    <!-- ════════════════════════════════════════ -->
+    <div id="doc-cgu" class="doc-panel" role="tabpanel" aria-labelledby="btn-cgu">
+      <div class="doc-content">
+        <div class="doc-header">
+          <div class="doc-header-icon">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          </div>
+          <div>
+            <h2>Conditions Générales d'Utilisation</h2>
+            <p>Application EC-Civil · République du Congo · Version 1.0 — Janvier 2025</p>
+          </div>
+        </div>
+
+        <div class="doc-body">
+
+          <div class="doc-article">
+            <span class="doc-article-num">Article 1</span>
+            <h3>Présentation du service</h3>
+            <p>EC-Civil est une application mobile et web développée dans le cadre de la modernisation des services publics en République du Congo. Elle permet aux citoyens de soumettre leurs demandes de pièces civiles (Carte Nationale d'Identité, Passeport, Numéro d'Identification Unique), de suivre l'avancement de leur dossier en temps réel et de communiquer avec les agents de préfecture responsables du traitement.</p>
+            <p>L'application EC-Civil est un outil de facilitation administrative. Elle ne se substitue pas aux autorités compétentes de l'État congolais qui demeurent seules responsables de la délivrance officielle des pièces civiles.</p>
+          </div>
+
+          <div class="doc-article">
+            <span class="doc-article-num">Article 2</span>
+            <h3>Acceptation des conditions</h3>
+            <p>L'utilisation de l'application EC-Civil implique l'acceptation pleine et entière des présentes Conditions Générales d'Utilisation (CGU). En cochant la case correspondante lors de votre inscription, vous reconnaissez avoir lu, compris et accepté l'ensemble des dispositions ci-présentes.</p>
+            <div class="doc-alert">
+              Si vous n'acceptez pas ces conditions, vous ne pouvez pas créer de compte ni utiliser les services proposés par EC-Civil.
+            </div>
+          </div>
+
+          <div class="doc-article">
+            <span class="doc-article-num">Article 3</span>
+            <h3>Inscription et compte utilisateur</h3>
+            <p><strong>3.1 — Conditions d'inscription.</strong> Pour créer un compte EC-Civil, vous devez :</p>
+            <ul>
+              <li>Être citoyen(ne) de la République du Congo ou y résider légalement ;</li>
+              <li>Fournir des informations exactes, complètes et à jour ;</li>
+              <li>Disposer d'un numéro de téléphone mobile valide au Congo ;</li>
+              <li>Disposer d'une adresse email valide et active ;</li>
+              <li>Être âgé(e) d'au moins 18 ans, ou agir sous la responsabilité d'un tuteur légal.</li>
+            </ul>
+            <p style="margin-top:14px;"><strong>3.2 — Responsabilité du compte.</strong> Vous êtes seul(e) responsable de la confidentialité de vos identifiants de connexion. Toute activité effectuée depuis votre compte vous est entièrement imputée. En cas de suspicion de compromission de votre compte, vous devez nous en informer immédiatement via la procédure de réinitialisation disponible dans l'application.</p>
+            <p style="margin-top:10px;"><strong>3.3 — Exactitude des informations.</strong> Toute information fausse ou trompeuse fournie lors de l'inscription engage votre responsabilité et peut entraîner l'annulation de votre demande, la suspension de votre compte, et le signalement aux autorités compétentes.</p>
+          </div>
+
+          <div class="doc-article">
+            <span class="doc-article-num">Article 4</span>
+            <h3>Services proposés</h3>
+            <p>EC-Civil met à la disposition des citoyens les fonctionnalités suivantes :</p>
+            <ul>
+              <li><strong>Soumission de dossier en ligne</strong> : dépôt numérique des documents justificatifs pour les demandes de CNI, Passeport et NIU ;</li>
+              <li><strong>Paiement mobile sécurisé</strong> : règlement des frais de dossier via MTN Mobile Money et Airtel Money ;</li>
+              <li><strong>Suivi en temps réel</strong> : consultation de l'état d'avancement de votre dossier ;</li>
+              <li><strong>Notification push</strong> : réception d'alertes à chaque changement de statut via Firebase Cloud Messaging ;</li>
+              <li><strong>Messagerie</strong> : communication directe et sécurisée avec l'agent de préfecture responsable ;</li>
+              <li><strong>Signalement</strong> : possibilité d'alerter un agent en cas de retard ou de blocage de votre dossier.</li>
+            </ul>
+          </div>
+
+          <div class="doc-article">
+            <span class="doc-article-num">Article 5</span>
+            <h3>Paiements et frais de dossier</h3>
+            <p><strong>5.1 — Tarifs en vigueur.</strong></p>
+            <table class="tarif-table">
+              <thead>
+                <tr><th>Type de pièce</th><th>Frais de dossier</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Carte Nationale d'Identité (CNI)</td><td>5 000 FCFA</td></tr>
+                <tr><td>Passeport biométrique</td><td>25 000 FCFA</td></tr>
+                <tr><td>Numéro d'Identification Unique (NIU)</td><td>3 000 FCFA</td></tr>
+              </tbody>
+            </table>
+            <p><strong>5.2 — Modalités de paiement.</strong> Le paiement s'effectue exclusivement via MTN MoMo ou Airtel Money. Aucun paiement en espèces n'est accepté via l'application.</p>
+            <p style="margin-top:10px;"><strong>5.3 — Confirmation de paiement.</strong> Le paiement est considéré comme effectué uniquement après confirmation de la transaction par l'opérateur Mobile Money. Votre dossier est soumis automatiquement à réception de cette confirmation.</p>
+            <div class="doc-highlight">
+              <strong>5.4 — Non-remboursement.</strong> Les frais de dossier réglés sont non remboursables, sauf en cas de défaillance technique avérée du système de paiement imputable à EC-Civil ou à ses partenaires techniques.
+            </div>
+          </div>
+
+          <div class="doc-article">
+            <span class="doc-article-num">Article 6</span>
+            <h3>Obligations de l'utilisateur</h3>
+            <p>En utilisant EC-Civil, vous vous engagez à :</p>
+            <ul>
+              <li>Fournir uniquement des documents authentiques et valides ;</li>
+              <li>Ne pas tenter d'usurper l'identité d'un tiers ;</li>
+              <li>Ne pas soumettre plusieurs dossiers pour la même pièce simultanément ;</li>
+              <li>Ne pas utiliser l'application à des fins frauduleuses ou illicites ;</li>
+              <li>Ne pas tenter de pirater ou d'altérer le fonctionnement de l'application ;</li>
+              <li>Respecter les rendez-vous fixés par les agents de préfecture ;</li>
+              <li>Mettre à jour vos informations personnelles en cas de changement.</li>
+            </ul>
+            <p style="margin-top:12px;">Tout manquement peut entraîner la suspension ou la suppression définitive de votre compte, sans préjudice des poursuites judiciaires éventuelles.</p>
+          </div>
+
+          <div class="doc-article">
+            <span class="doc-article-num">Article 7</span>
+            <h3>Architecture et sécurité des données</h3>
+            <p>EC-Civil repose sur une architecture de sécurité renforcée dite <strong>Air-Gap</strong>. Les données civiles sensibles et la production physique des pièces sont traitées sur un serveur local entièrement isolé d'Internet. Seules les informations nécessaires au suivi administratif transitent via la plateforme en ligne.</p>
+            <div class="doc-highlight">
+              <strong>Vos données biométriques (empreintes digitales, photographie) ne sont jamais exposées sur Internet</strong> et ne peuvent faire l'objet d'aucune interception externe.
+            </div>
+          </div>
+
+          <div class="doc-article">
+            <span class="doc-article-num">Article 8</span>
+            <h3>Limitation de responsabilité</h3>
+            <p>EC-Civil s'engage à assurer la disponibilité du service dans les meilleures conditions possibles. Toutefois, EC-Civil ne saurait être tenu responsable :</p>
+            <ul>
+              <li>Des délais de traitement des dossiers, qui relèvent exclusivement de la compétence des agents de préfecture ;</li>
+              <li>Des interruptions de service dues à des causes externes (coupures réseau, problèmes des opérateurs Mobile Money, force majeure) ;</li>
+              <li>Des conséquences d'informations erronées fournies par l'utilisateur.</li>
+            </ul>
+          </div>
+
+          <div class="doc-article">
+            <span class="doc-article-num">Article 9</span>
+            <h3>Modification des conditions</h3>
+            <p>EC-Civil se réserve le droit de modifier les présentes CGU à tout moment. Les utilisateurs seront notifiés de toute modification substantielle via l'application. La poursuite de l'utilisation du service après notification vaut acceptation des nouvelles conditions.</p>
+          </div>
+
+          <div class="doc-article">
+            <span class="doc-article-num">Article 10</span>
+            <h3>Droit applicable et juridiction</h3>
+            <p>Les présentes CGU sont régies par le droit de la République du Congo. Tout litige relatif à leur interprétation ou à leur exécution relève de la compétence exclusive des tribunaux compétents de Brazzaville.</p>
+          </div>
+
+          <div class="doc-article">
+            <span class="doc-article-num">Article 11</span>
+            <h3>Contact</h3>
+            <p>Pour toute question relative aux présentes conditions :</p>
+            <ul>
+              <li>Email : <a href="mailto:support@eccivil.cg" style="color:var(--vert);">support@eccivil.cg</a></li>
+              <li>Adresse : Brazzaville, République du Congo</li>
+            </ul>
+            <p style="margin-top:14px; font-size:0.82rem; color:var(--muted);">Dernière mise à jour : Janvier 2025 · © 2025 EC-Civil — Tous droits réservés</p>
+          </div>
+
+        </div><!-- /doc-body -->
+      </div><!-- /doc-content -->
+    </div><!-- /doc-cgu -->
+
+    <!-- ════════════════════════════════════════ -->
+    <!-- PANEL : CONFIDENTIALITÉ                 -->
+    <!-- ════════════════════════════════════════ -->
+    <div id="doc-confidentialite" class="doc-panel" role="tabpanel" aria-labelledby="btn-confidentialite" hidden>
+      <div class="doc-content">
+        <div class="doc-header">
+          <div class="doc-header-icon">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+          </div>
+          <div>
+            <h2>Politique de Confidentialité</h2>
+            <p>Application EC-Civil · République du Congo · Version 1.0 — Janvier 2025</p>
+          </div>
+        </div>
+
+        <div class="doc-body">
+
+          <div class="doc-article">
+            <h3>Préambule</h3>
+            <p>EC-Civil accorde une importance capitale à la protection de vos données personnelles. La présente politique décrit de manière transparente quelles données nous collectons, pourquoi nous les collectons, comment nous les utilisons et comment nous les protégeons.</p>
+          </div>
+
+          <div class="doc-article">
+            <span class="doc-article-num">Section 1</span>
+            <h3>Données collectées</h3>
+            <p><strong>1.1 — Données d'identité</strong></p>
+            <ul>
+              <li>Nom et prénom</li>
+              <li>Date et lieu de naissance</li>
+              <li>Numéro de téléphone mobile</li>
+              <li>Adresse email</li>
+            </ul>
+            <p style="margin-top:14px;"><strong>1.2 — Documents justificatifs</strong></p>
+            <ul>
+              <li>Copies numérisées des documents administratifs fournis lors de la soumission de votre dossier (actes de naissance, ancienne pièce d'identité, etc.)</li>
+            </ul>
+            <p style="margin-top:14px;"><strong>1.3 — Données biométriques</strong></p>
+            <ul>
+              <li>Empreintes digitales (capturées uniquement lors du rendez-vous physique en préfecture)</li>
+              <li>Photographie biométrique</li>
+            </ul>
+            <div class="doc-alert">
+              ⚠️ IMPORTANT : Les données biométriques sont collectées et traitées EXCLUSIVEMENT sur le serveur local hors ligne de la préfecture. Elles ne transitent jamais par Internet.
+            </div>
+            <p style="margin-top:14px;"><strong>1.4 — Données de transaction</strong></p>
+            <ul>
+              <li>Montant et méthode de paiement Mobile Money</li>
+              <li>Identifiant de transaction (fourni par l'opérateur MTN ou Airtel)</li>
+            </ul>
+            <p style="margin-top:14px;"><strong>1.5 — Données techniques</strong></p>
+            <ul>
+              <li>Token Firebase Cloud Messaging (pour les notifications push)</li>
+              <li>Adresse IP de connexion</li>
+              <li>Type d'appareil et version du système d'exploitation</li>
+            </ul>
+          </div>
+
+          <div class="doc-article">
+            <span class="doc-article-num">Section 2</span>
+            <h3>Finalités du traitement</h3>
+            <p>Vos données sont collectées et traitées pour les finalités suivantes :</p>
+            <ul>
+              <li>Création et gestion de votre compte utilisateur ;</li>
+              <li>Traitement et suivi de vos demandes de pièces civiles ;</li>
+              <li>Vérification de votre identité et de l'authenticité de vos documents ;</li>
+              <li>Traitement sécurisé de votre paiement Mobile Money ;</li>
+              <li>Envoi de notifications push sur l'avancement de votre dossier ;</li>
+              <li>Communication avec l'agent de préfecture responsable ;</li>
+              <li>Amélioration continue des services de l'application ;</li>
+              <li>Respect des obligations légales et réglementaires.</li>
+            </ul>
+          </div>
+
+          <div class="doc-article">
+            <span class="doc-article-num">Section 3</span>
+            <h3>Partage et transfert des données</h3>
+            <div class="doc-highlight">
+              <strong>Vos données personnelles ne sont jamais vendues, louées ou cédées à des tiers à des fins commerciales.</strong>
+            </div>
+            <p style="margin-top:12px;">Elles peuvent être partagées uniquement avec :</p>
+            <ul>
+              <li>Les <strong>agents de préfecture habilités</strong>, dans le strict cadre du traitement de votre dossier ;</li>
+              <li>Les <strong>opérateurs Mobile Money</strong> (MTN MoMo, Airtel Money), uniquement pour la confirmation de votre paiement ;</li>
+              <li><strong>Firebase (Google)</strong>, pour l'envoi des notifications push, dans le respect de la politique de confidentialité de Google ;</li>
+              <li><strong>ZAVU</strong>, pour l'envoi du code OTP de réinitialisation de mot de passe par SMS ou WhatsApp ;</li>
+              <li>Les <strong>autorités de l'État congolais</strong>, sur réquisition judiciaire ou administrative légalement fondée.</li>
+            </ul>
+          </div>
+
+          <div class="doc-article">
+            <span class="doc-article-num">Section 4</span>
+            <h3>Durée de conservation</h3>
+            <table class="tarif-table">
+              <thead>
+                <tr><th>Catégorie de données</th><th>Durée de conservation</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Données de compte</td><td>Durée de vie du compte + 5 ans</td></tr>
+                <tr><td>Documents justificatifs</td><td>Durée du dossier + 10 ans (archivage légal)</td></tr>
+                <tr><td>Données biométriques</td><td>Selon règles d'archivage de l'État</td></tr>
+                <tr><td>Données de transaction</td><td>10 ans (obligation comptable)</td></tr>
+                <tr><td>Données techniques</td><td>12 mois glissants</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="doc-article">
+            <span class="doc-article-num">Section 5</span>
+            <h3>Vos droits</h3>
+            <p>Conformément aux principes de protection des données personnelles, vous disposez des droits suivants :</p>
+            <ul>
+              <li><strong>Droit d'accès</strong> : consulter les données vous concernant ;</li>
+              <li><strong>Droit de rectification</strong> : corriger des données inexactes ;</li>
+              <li><strong>Droit à l'effacement</strong> : demander la suppression de votre compte et de vos données, sous réserve des obligations légales d'archivage ;</li>
+              <li><strong>Droit d'opposition</strong> : vous opposer à certains traitements ;</li>
+              <li><strong>Droit à la portabilité</strong> : obtenir vos données dans un format lisible.</li>
+            </ul>
+            <p style="margin-top:12px;">Pour exercer ces droits, contactez-nous à : <a href="mailto:privacy@eccivil.cg" style="color:var(--vert);">privacy@eccivil.cg</a></p>
+          </div>
+
+          <div class="doc-article">
+            <span class="doc-article-num">Section 6</span>
+            <h3>Sécurité des données</h3>
+            <p>Nous mettons en œuvre les mesures techniques et organisationnelles suivantes :</p>
+            <ul>
+              <li>Chiffrement des mots de passe avec <strong>bcrypt</strong> (facteur de coût 12) ;</li>
+              <li>Authentification par <strong>token JWT</strong> à durée limitée (24 heures) ;</li>
+              <li>Communications chiffrées via <strong>HTTPS/TLS</strong> ;</li>
+              <li><strong>Architecture Air-Gap</strong> : isolation totale du serveur de production biométrique d'Internet ;</li>
+              <li>Réinitialisation de mot de passe par <strong>code OTP ZAVU</strong> à usage unique (valable 10 minutes) via SMS ou WhatsApp ;</li>
+              <li>Accès aux données restreint aux seuls agents habilités ;</li>
+              <li><strong>Journal d'audit</strong> horodaté de toutes les actions sensibles.</li>
+            </ul>
+          </div>
+
+          <div class="doc-article">
+            <span class="doc-article-num">Section 7</span>
+            <h3>Cookies et technologies de suivi</h3>
+            <p>L'application mobile EC-Civil n'utilise pas de cookies publicitaires. Les seules données techniques collectées le sont à des fins de fonctionnement du service (authentification, notifications) et ne sont pas utilisées à des fins de profilage commercial.</p>
+          </div>
+
+          <div class="doc-article">
+            <span class="doc-article-num">Section 8</span>
+            <h3>Modifications de la politique</h3>
+            <p>Toute modification substantielle de la présente politique sera notifiée aux utilisateurs via l'application avant son entrée en vigueur.</p>
+          </div>
+
+          <div class="doc-article">
+            <span class="doc-article-num">Section 9</span>
+            <h3>Contact — Délégué à la protection des données</h3>
+            <ul>
+              <li>Email : <a href="mailto:privacy@eccivil.cg" style="color:var(--vert);">privacy@eccivil.cg</a></li>
+              <li>Adresse : Brazzaville, République du Congo</li>
+            </ul>
+            <p style="margin-top:14px; font-size:0.82rem; color:var(--muted);">Dernière mise à jour : Janvier 2025 · © 2025 EC-Civil — Tous droits réservés</p>
+          </div>
+
+        </div><!-- /doc-body -->
+      </div><!-- /doc-content -->
+    </div><!-- /doc-confidentialite -->
+
+  </div><!-- /container -->
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="assets/img/logo.webp" alt="EC-Civil logo">
+      <p>Application mobile de suivi des pièces civiles en République du Congo. CNI, Passeport, NIU.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="index.html#fonctionnement">Fonctionnement</a></li>
+        <li><a href="index.html#tarifs">Tarifs</a></li>
+        <li><a href="index.html#securite">Sécurité</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Légal</h4>
+      <ul>
+        <li><a href="legal.html?doc=cgu">Conditions d'utilisation</a></li>
+        <li><a href="legal.html?doc=confidentialite">Politique de confidentialité</a></li>
+        <li><a href="mailto:privacy@eccivil.cg">privacy@eccivil.cg</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom container">
+    <p>© 2025 EC-Civil — Tous droits réservés. Brazzaville, République du Congo.</p>
+    <p><a href="index.html" style="color:rgba(255,255,255,0.4); text-decoration:none;">Retour à l'accueil</a></p>
+  </div>
+  <div class="footer-tricolor"></div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
