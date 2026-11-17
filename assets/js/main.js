@@ -57,6 +57,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }));
 
     // Article en cours de lecture → surligné dans le sommaire
+    const libelle = document.getElementById('sommaireCourant');
+    const barre = document.getElementById('progresLecture');
     const articles = liens.map((a) => document.querySelector(a.getAttribute('href'))).filter(Boolean);
     const marquer = () => {
       let courant = articles[0];
@@ -66,7 +68,16 @@ document.addEventListener('DOMContentLoaded', () => {
       if (window.innerHeight + window.scrollY >= document.body.scrollHeight - 4) {
         courant = articles[articles.length - 1];
       }
-      liens.forEach((a) => a.classList.toggle('actif', courant && a.getAttribute('href') === '#' + courant.id));
+      liens.forEach((a) => {
+        const actif = courant && a.getAttribute('href') === '#' + courant.id;
+        a.classList.toggle('actif', actif);
+        if (actif && libelle) libelle.textContent = a.textContent.replace(/^\d+/, (n) => n + '. ');
+      });
+      // Barre de progression de lecture
+      if (barre) {
+        const max = document.documentElement.scrollHeight - window.innerHeight;
+        barre.style.width = (max > 0 ? Math.min(100, (window.scrollY / max) * 100) : 0) + '%';
+      }
     };
     marquer();
     window.addEventListener('scroll', marquer, { passive: true });
