@@ -275,9 +275,13 @@ footer{background:var(--encre);color:rgba(255,255,255,.7);padding:56px 0 0}
 @media (prefers-reduced-motion:reduce){.apparait{opacity:1;transform:none;transition:none}.notif-flottante,.badge-point{animation:none}}
 
 /* ── Pages « Conditions » et « Confidentialité » ──────
-   Deux pages distinctes, aux couleurs vertes d'EC-Civil. */
+   Deux espaces distincts : vert pour les conditions,
+   bleu nuit et or pour la protection des données.      */
 .page-doc{--accent:var(--vert);--accent-clair:var(--vert-clair);--accent-bord:#CDEBD8;background:var(--fond)}
-.doc-hero{position:relative;overflow:hidden;color:#fff;padding:52px 0 64px;background:linear-gradient(135deg,#0B5E33 0%,#0A3F24 55%,#06140C 100%)}
+.page-doc.doc-conf{--accent:#1D4E9E;--accent-clair:#EAF1FC;--accent-bord:#CBDAF3}
+.doc-hero{position:relative;overflow:hidden;color:#fff;padding:52px 0 64px}
+.doc-cgu .doc-hero{background:linear-gradient(135deg,#0B5E33 0%,#0A3F24 55%,#06140C 100%)}
+.doc-conf .doc-hero{background:linear-gradient(135deg,#123A78 0%,#0B2349 55%,#060F22 100%)}
 .doc-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(520px 340px at 88% 20%,rgba(251,222,74,.16),transparent 60%);pointer-events:none}
 .doc-hero-inner{position:relative;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center}
 .retour-lien{display:flex;width:max-content;align-items:center;gap:8px;color:rgba(255,255,255,.8);text-decoration:none;font-size:.88rem;font-weight:600;margin-bottom:26px;padding:7px 14px 7px 10px;border-radius:12px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);transition:background .2s}
