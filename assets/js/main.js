@@ -42,6 +42,36 @@ document.addEventListener('DOMContentLoaded', () => {
   const annee = document.getElementById('annee');
   if (annee) annee.textContent = new Date().getFullYear();
 
+  // ── Pages légales : sommaire ──────────────────
+  const sommaire = document.getElementById('sommaire');
+  if (sommaire) {
+    const bouton = sommaire.querySelector('.sommaire-bouton');
+    const liens = [...sommaire.querySelectorAll('a[href^="#art-"]')];
+    bouton.addEventListener('click', () => {
+      const ouvert = sommaire.classList.toggle('ouvert');
+      bouton.setAttribute('aria-expanded', ouvert);
+    });
+    liens.forEach((a) => a.addEventListener('click', () => {
+      sommaire.classList.remove('ouvert');
+      bouton.setAttribute('aria-expanded', 'false');
+    }));
+
+    // Article en cours de lecture → surligné dans le sommaire
+    const articles = liens.map((a) => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+    const marquer = () => {
+      let courant = articles[0];
+      for (const art of articles) {
+        if (art.getBoundingClientRect().top <= 140) courant = art;
+      }
+      if (window.innerHeight + window.scrollY >= document.body.scrollHeight - 4) {
+        courant = articles[articles.length - 1];
+      }
+      liens.forEach((a) => a.classList.toggle('actif', courant && a.getAttribute('href') === '#' + courant.id));
+    };
+    marquer();
+    window.addEventListener('scroll', marquer, { passive: true });
+  }
+
   // ── Apparition des éléments au défilement ─────
   const elements = document.querySelectorAll('.apparait');
   if ('IntersectionObserver' in window) {
