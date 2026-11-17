@@ -226,6 +226,18 @@ section{padding:96px 0}
 .faq details[open] summary::after{content:'−'}
 .faq details p{padding:0 20px 18px;font-size:.95rem;color:var(--muted)}
 
+/* ── Documents légaux (accueil) ──────────────────── */
+.legal-cartes{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.legal-carte{display:flex;gap:18px;align-items:flex-start;background:#fff;border:1px solid var(--bord);border-radius:var(--r-lg);padding:26px;box-shadow:var(--ombre);text-decoration:none;color:var(--texte);transition:transform .2s,border-color .2s}
+.legal-carte:hover{transform:translateY(-4px);border-color:rgba(14,143,74,.4)}
+.legal-icone{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:var(--vert-clair);color:var(--vert);flex-shrink:0}
+.legal-icone svg{width:26px;height:26px}
+.legal-texte{display:flex;flex-direction:column;gap:4px}
+.legal-texte small{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.legal-texte b{font-family:var(--titre);font-size:1.15rem;color:var(--encre)}
+.legal-texte span{font-size:.92rem;color:var(--muted)}
+.legal-texte em{font-style:normal;font-weight:700;color:var(--vert);margin-top:6px}
+
 /* ── Contact ─────────────────────────────────────── */
 .contact-bloc{display:grid;grid-template-columns:1fr 1.1fr;gap:28px;align-items:stretch;background:linear-gradient(150deg,var(--encre-3),var(--encre));border-radius:var(--r-xl);padding:40px;color:#fff;position:relative;overflow:hidden}
 .contact-bloc::before{content:'';position:absolute;right:-120px;top:-120px;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(251,222,74,.18),transparent 65%)}
@@ -317,7 +329,7 @@ footer{background:var(--encre);color:rgba(255,255,255,.7);padding:56px 0 0}
   .chiffres-grille{grid-template-columns:repeat(2,1fr)}
   .chiffre:nth-child(2){border-right:none}
   .chiffre:nth-child(-n+2){border-bottom:1px solid var(--bord)}
-  .etapes,.tarifs,.espaces,.securite-grille,.statuts,.bento{grid-template-columns:1fr}
+  .etapes,.tarifs,.espaces,.securite-grille,.statuts,.bento,.legal-cartes{grid-template-columns:1fr}
   .telephone{width:270px;transform:none}
   .notif-flottante{right:-6px;top:auto;bottom:-18px}
   .contact-bloc{padding:28px 20px}
