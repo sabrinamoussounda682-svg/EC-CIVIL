@@ -3,354 +3,485 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="EC-Civil — Application mobile de déclaration, d'enrôlement et de suivi des pièces civiles en République du Congo. CNI, Passeport, NIU.">
-<meta property="og:title" content="EC-Civil — République du Congo">
-<meta property="og:description" content="Déposez votre dossier, payez en ligne et suivez vos pièces civiles depuis votre téléphone.">
-<meta property="og:image" content="assets/img/logo.webp">
-<meta name="theme-color" content="#1a7a3c">
-<title>EC-Civil — République du Congo</title>
-<link rel="icon" type="image/webp" href="assets/img/logo.webp">
+<meta name="description" content="EC-Civil — Demandez votre CNI, votre passeport ou votre NIU depuis votre téléphone : dépôt du dossier, paiement Mobile Money, suivi en temps réel, convocation avec carte et itinéraire. République du Congo.">
+<meta property="og:title" content="EC-Civil — Vos pièces d'identité depuis votre téléphone">
+<meta property="og:description" content="Déposez votre dossier, payez par Mobile Money et suivez votre CNI, passeport ou NIU en temps réel.">
+<meta property="og:image" content="assets/img/logo.png">
+<meta name="theme-color" content="#06140C">
+<title>EC-Civil — CNI, Passeport et NIU depuis votre téléphone</title>
+<link rel="icon" type="image/png" href="assets/img/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
 <a href="#contenu" class="skip-link">Aller au contenu</a>
 
-<!-- NAVBAR -->
-<nav class="navbar" role="navigation" aria-label="Navigation principale">
+<!-- ═══ NAVIGATION ═══ -->
+<nav class="navbar" id="navbar" aria-label="Navigation principale">
   <div class="nav-inner">
     <a href="index.html" class="nav-brand" aria-label="EC-Civil — Accueil">
-      <img src="assets/img/logo.webp" alt="Logo EC-Civil">
+      <img src="assets/img/logo.png" alt="Logo EC-Civil">
       <div class="nav-brand-text">
         <span class="nav-brand-title">EC-Civil</span>
         <span class="nav-brand-sub">République du Congo</span>
       </div>
     </a>
-    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Menu">
-      <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-        <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
-      </svg>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Ouvrir le menu">
+      <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
-    <ul class="nav-links" id="navLinks" role="list">
+    <ul class="nav-links" id="navLinks">
       <li><a href="#fonctionnement">Fonctionnement</a></li>
       <li><a href="#tarifs">Tarifs</a></li>
-      <li><a href="#securite">Sécurité</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="legal.html" class="btn-nav">Documents légaux</a></li>
+      <li><a href="#fonctionnalites">Fonctionnalités</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact" class="btn-nav">Nous contacter</a></li>
     </ul>
   </div>
 </nav>
 
-<div class="tricolor"></div>
-
-<!-- HERO -->
+<!-- ═══ HÉROS ═══ -->
 <header class="hero" id="contenu">
-  <div class="hero-inner">
-    <div class="hero-content">
-      <div class="hero-badge">
-        <span class="hero-badge-dot"></span>
-        Service public numérique · Congo-Brazzaville
+  <div class="container hero-inner">
+    <div>
+      <div class="badge"><span class="badge-point"></span> Service numérique d'état civil · Congo</div>
+      <h1>Votre CNI, votre passeport, votre NIU&nbsp;: <span class="degrade">tout depuis votre téléphone.</span></h1>
+      <p class="hero-desc">EC-Civil vous évite les allers-retours au guichet&nbsp;: vous déposez votre dossier en ligne, vous payez par Mobile Money, vous suivez chaque étape en temps réel et l'application vous guide jusqu'au bon guichet le jour du rendez-vous.</p>
+      <div class="hero-actions">
+        <a href="#fonctionnement" class="btn btn-or">
+          Comment ça marche
+          <svg fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="#tarifs" class="btn btn-verre">Voir les tarifs</a>
       </div>
-      <h1>Vos pièces civiles,<br><span>enfin accessibles.</span></h1>
-      <p class="hero-desc">
-        EC-Civil modernise le dépôt et le suivi de vos demandes de CNI, Passeport et NIU. Déposez votre dossier depuis votre téléphone, payez via Mobile Money et suivez chaque étape en temps réel.
-      </p>
-      <div class="hero-tags">
-        <span class="hero-tag">📄 CNI</span>
-        <span class="hero-tag">📘 Passeport</span>
-        <span class="hero-tag">🔢 NIU</span>
-        <span class="hero-tag">💳 MTN MoMo · Airtel Money</span>
-        <span class="hero-tag">🔐 Architecture Air-Gap</span>
+      <div class="hero-confiance">
+        <span><svg fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Paiement MTN MoMo &amp; Airtel Money</span>
+        <span><svg fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Suivi en temps réel</span>
+        <span><svg fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Données protégées</span>
       </div>
     </div>
-    <div class="hero-logo-wrap">
-      <img src="assets/img/logo.webp" alt="EC-Civil — Logo officiel">
+
+    <!-- Maquette de l'application -->
+    <div class="telephone-zone" aria-hidden="true">
+      <div class="halo"></div>
+      <div class="telephone">
+        <div class="ecran">
+          <div class="ecran-encoche"></div>
+          <div class="ecran-entete">
+            <div><small>Bonjour</small><strong>Mon dossier</strong></div>
+            <div class="ecran-pastille"><img src="assets/img/logo.png" alt=""></div>
+          </div>
+          <div class="carte-doc">
+            <small>Carte Nationale d'Identité</small>
+            <b>N° EC-2026-000123</b>
+            <span class="etat"><i></i> Convoqué</span>
+          </div>
+          <ul class="ligne-temps">
+            <li class="ok"><span class="pt"></span><div><b>Dossier soumis</b>Paiement confirmé · 5 100 FCFA</div></li>
+            <li class="ok"><span class="pt"></span><div><b>En traitement</b>Pièces vérifiées par l'agent</div></li>
+            <li class="encours"><span class="pt"></span><div><b>Convocation empreintes</b>Lundi 9 h · Mairie de Bacongo</div></li>
+            <li><span class="pt"></span><div><b>Production puis retrait</b>Vous serez prévenu(e)</div></li>
+          </ul>
+          <div class="mini-carte"><span class="epingle"></span><span class="guichet">Guichet 3 · Itinéraire</span></div>
+        </div>
+        <div class="notif-flottante">
+          <span class="ic"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9M13.7 21a2 2 0 0 1-3.4 0"/></svg></span>
+          <div><b>Votre CNI est prête !</b>Retrait au guichet 5</div>
+        </div>
+      </div>
     </div>
   </div>
 </header>
-
 <div class="tricolor"></div>
 
-<!-- FONCTIONNALITÉS -->
+<!-- ═══ CHIFFRES CLÉS ═══ -->
+<div class="container chiffres">
+  <div class="chiffres-grille apparait">
+    <div class="chiffre"><b>3 pièces</b><span>CNI, passeport et NIU</span></div>
+    <div class="chiffre"><b>2 passages</b><span>au lieu de 4 à 5 au guichet</span></div>
+    <div class="chiffre"><b>100 FCFA</b><span>de frais de service seulement</span></div>
+    <div class="chiffre"><b>24 h/24</b><span>pour déposer et suivre</span></div>
+  </div>
+</div>
+
+<!-- ═══ FONCTIONNEMENT ═══ -->
 <section id="fonctionnement">
   <div class="container">
-    <p class="section-label">Ce que vous pouvez faire</p>
-    <h2 class="section-title">Tout votre dossier, depuis votre téléphone</h2>
-    <p class="section-desc">EC-Civil couvre l'ensemble du parcours citoyen, du dépôt de dossier jusqu'au retrait de votre pièce.</p>
+    <div class="entete-centre">
+      <p class="sur-titre">Le parcours, étape par étape</p>
+      <h2 class="section-titre">Comment fonctionne EC-Civil&nbsp;?</h2>
+      <p class="section-desc">De la création de votre compte au retrait de votre pièce, voici exactement ce qui se passe. Vous ne vous déplacez que deux fois&nbsp;: pour vos empreintes et pour récupérer votre pièce.</p>
+    </div>
 
-    <div class="features-grid">
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+    <div class="etapes">
+      <article class="etape apparait">
+        <div class="etape-num"><span>Étape 1</span>
+          <svg fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></svg></div>
+        <h3>Créez et activez votre compte</h3>
+        <p>Inscrivez-vous avec vos nom, prénom, e-mail et numéro de téléphone.</p>
+        <ul>
+          <li>Choisissez un mot de passe robuste (8 caractères, une majuscule, un chiffre, un caractère spécial).</li>
+          <li>Saisissez le code à 6 chiffres reçu par e-mail pour activer le compte, puis connectez-vous.</li>
+        </ul>
+      </article>
+      <article class="etape apparait">
+        <div class="etape-num"><span>Étape 2</span>
+          <svg fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M12 18v-6M9 15l3-3 3 3"/></svg></div>
+        <h3>Déposez votre dossier</h3>
+        <p>Choisissez la pièce (CNI, passeport ou NIU), nouvelle demande ou renouvellement, puis votre centre.</p>
+        <ul>
+          <li>Remplissez le formulaire d'identité.</li>
+          <li>Ajoutez vos pièces justificatives en photo ou en PDF, directement depuis le téléphone.</li>
+        </ul>
+      </article>
+      <article class="etape apparait">
+        <div class="etape-num"><span>Étape 3</span>
+          <svg fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01M9 7h6M9 11h6"/></svg></div>
+        <h3>Payez par Mobile Money</h3>
+        <p>Réglez le prix de la pièce plus 100 FCFA de frais de service avec MTN MoMo ou Airtel Money.</p>
+        <ul>
+          <li>Validez le paiement sur votre téléphone.</li>
+          <li>Votre dossier reçoit un numéro (EC-2026-…) et un récépissé PDF avec code QR, téléchargeable à tout moment.</li>
+        </ul>
+      </article>
+      <article class="etape apparait">
+        <div class="etape-num"><span>Étape 4</span>
+          <svg fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+        <h3>Suivez le traitement</h3>
+        <p>Un agent vérifie votre dossier. Chaque changement de statut vous est notifié (application, notification, e-mail).</p>
+        <ul>
+          <li>Écrivez à l'agent dans la messagerie du dossier.</li>
+          <li>S'il manque une pièce, remplacez-la directement depuis l'application.</li>
+        </ul>
+      </article>
+      <article class="etape apparait">
+        <div class="etape-num"><span>Étape 5</span>
+          <svg fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <h3>Allez prendre vos empreintes</h3>
+        <p>Vous recevez une convocation avec la date, l'heure, le centre et le numéro de guichet.</p>
+        <ul>
+          <li>Le lieu s'affiche sur une carte.</li>
+          <li>Bouton « Itinéraire » dans l'application, ou « Google Maps » pour le guidage vocal.</li>
+        </ul>
+      </article>
+      <article class="etape apparait">
+        <div class="etape-num"><span>Étape 6</span>
+          <svg fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M15 9h3M15 13h3M7 16h4"/></svg></div>
+        <h3>Récupérez votre pièce</h3>
+        <p>Quand votre pièce est prête, l'application vous prévient et vous indique où la retirer.</p>
+        <ul>
+          <li>Lieu de retrait, guichet et carte avec itinéraire.</li>
+          <li>Présentez-vous avec votre récépissé.</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TARIFS ═══ -->
+<section id="tarifs" class="section-fond">
+  <div class="container">
+    <div class="entete-centre">
+      <p class="sur-titre">Tarifs officiels</p>
+      <h2 class="section-titre">Combien ça coûte&nbsp;?</h2>
+      <p class="section-desc">Vous payez une seule fois, au dépôt du dossier : le prix de la pièce et 100 FCFA de frais de service EC-Civil.</p>
+    </div>
+
+    <div class="tarifs">
+      <article class="tarif cni apparait">
+        <div class="tarif-entete">
+          <div class="tarif-icone"><svg fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M15 9h3M15 13h3M7 16h4"/></svg></div>
+          <div><small>CNI</small><h3>Carte Nationale d'Identité</h3></div>
         </div>
-        <h3>Dépôt de dossier en ligne</h3>
-        <p>Scannez et envoyez vos pièces justificatives directement depuis votre téléphone. Aucun déplacement requis pour cette étape.</p>
+        <div class="tarif-prix"><b>5 000</b><span>FCFA</span></div>
+        <p class="tarif-total">Total payé : <strong>5 100 FCFA</strong> (frais de service inclus)</p>
+        <div class="tarif-infos">
+          <div><small>Délai</small><b>10 à 21 jours</b></div>
+          <div><small>Biométrie</small><b>Requise</b></div>
+        </div>
+        <h4>Pièce à fournir</h4>
+        <ul>
+          <li>Acte de naissance</li>
+        </ul>
+      </article>
+
+      <article class="tarif passeport apparait">
+        <div class="tarif-entete">
+          <div class="tarif-icone"><svg fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg></div>
+          <div><small>Passeport</small><h3>Passeport biométrique</h3></div>
+        </div>
+        <div class="tarif-prix"><b>50 000</b><span>FCFA</span></div>
+        <p class="tarif-total">Total payé : <strong>50 100 FCFA</strong> (frais de service inclus)</p>
+        <div class="tarif-infos">
+          <div><small>Délai</small><b>15 à 30 jours</b></div>
+          <div><small>Biométrie</small><b>Requise</b></div>
+        </div>
+        <h4>Pièces à fournir</h4>
+        <ul>
+          <li>Acte de naissance (original et copie)</li>
+          <li>Certificat de nationalité et casier judiciaire</li>
+          <li>CNI en cours de validité</li>
+          <li>4 photos d'identité récentes, fond blanc</li>
+          <li>Justificatif de profession ou de situation</li>
+        </ul>
+      </article>
+
+      <article class="tarif niu apparait">
+        <div class="tarif-entete">
+          <div class="tarif-icone"><svg fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 10a2 2 0 0 0-2 2c0 1.02-.1 2.51-.26 4M14 13.12c0 2.38 0 6.38-1 8.88M17.29 21.02c.12-.6.43-2.3.5-3.02M2 12a10 10 0 0 1 18-6M2 16h.01M21.8 16c.2-2 .131-5.354 0-6M5 19.5C5.5 18 6 15 6 12a6 6 0 0 1 .34-2M8.65 22c.21-.66.45-1.32.57-2M9 6.8a6 6 0 0 1 9 5.2v2"/></svg></div>
+          <div><small>NIU</small><h3>Numéro d'Identification Unique</h3></div>
+        </div>
+        <div class="tarif-prix"><b>2 000</b><span>FCFA</span></div>
+        <p class="tarif-total">Total payé : <strong>2 100 FCFA</strong> (frais de service inclus)</p>
+        <div class="tarif-infos">
+          <div><small>Délai</small><b>1 à 7 jours</b></div>
+          <div><small>Biométrie</small><b>Non requise</b></div>
+        </div>
+        <h4>Pièces à fournir</h4>
+        <ul>
+          <li>Récépissé du formulaire en ligne</li>
+          <li>Acte de naissance ou document en tenant lieu</li>
+          <li>Justificatif de situation (ex. : attestation d'inscription)</li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="note">
+      <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+      <p>Les montants des pièces sont fixés par les autorités de la République du Congo et peuvent évoluer. Les délais sont indicatifs. Les sommes réglées ne sont pas remboursables, sauf défaillance technique avérée du paiement.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ STATUTS ═══ -->
+<section id="statuts">
+  <div class="container">
+    <p class="sur-titre">Suivi du dossier</p>
+    <h2 class="section-titre">Que signifie chaque statut&nbsp;?</h2>
+    <p class="section-desc">Dans l'application, votre dossier affiche toujours l'un de ces statuts. Vous êtes prévenu(e) à chaque changement.</p>
+    <div class="statuts">
+      <div class="statut apparait" style="--c:#607D8B"><span class="statut-etiquette"><i></i>En attente de paiement</span><p>Le dossier est créé ; il sera soumis dès la confirmation de votre paiement.</p></div>
+      <div class="statut apparait" style="--c:#1565C0"><span class="statut-etiquette"><i></i>Soumis</span><p>Paiement confirmé. Votre dossier attend d'être pris en charge par un agent.</p></div>
+      <div class="statut apparait" style="--c:#B28704"><span class="statut-etiquette"><i></i>En traitement</span><p>Un agent vérifie vos informations et vos pièces justificatives.</p></div>
+      <div class="statut apparait" style="--c:#8E24AA"><span class="statut-etiquette"><i></i>Convoqué</span><p>Rendez-vous fixé pour vos empreintes : date, lieu, guichet et itinéraire.</p></div>
+      <div class="statut apparait" style="--c:#6A1B9A"><span class="statut-etiquette"><i></i>Empreintes prises</span><p>Vos données biométriques ont été relevées au guichet.</p></div>
+      <div class="statut apparait" style="--c:#00897B"><span class="statut-etiquette"><i></i>En production</span><p>Votre pièce est en cours de fabrication.</p></div>
+      <div class="statut apparait" style="--c:#0E8F4A"><span class="statut-etiquette"><i></i>Prêt</span><p>Votre pièce vous attend : lieu de retrait, guichet et itinéraire indiqués.</p></div>
+      <div class="statut apparait" style="--c:#1B5E20"><span class="statut-etiquette"><i></i>Récupéré</span><p>Vous avez retiré votre pièce. Le dossier est clos.</p></div>
+      <div class="statut apparait" style="--c:#EF6C00"><span class="statut-etiquette"><i></i>En quarantaine</span><p>Une vérification complémentaire est en cours ; l'agent peut vous contacter.</p></div>
+      <div class="statut apparait" style="--c:#DC241F"><span class="statut-etiquette"><i></i>Rejeté</span><p>Le dossier est refusé, avec un motif précis pour vous permettre de le corriger.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FONCTIONNALITÉS ═══ -->
+<section id="fonctionnalites" class="section-fond">
+  <div class="container">
+    <div class="entete-centre">
+      <p class="sur-titre">Dans l'application</p>
+      <h2 class="section-titre">Tout ce que vous pouvez faire</h2>
+      <p class="section-desc">Une seule application pour toutes vos démarches, pensée pour les smartphones les plus courants au Congo.</p>
+    </div>
+    <div class="bento">
+      <div class="tuile large sombre apparait">
+        <div class="tuile-icone"><svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <h3>Convocation géolocalisée</h3>
+        <p>Pour vos empreintes comme pour le retrait, l'agent place le lieu exact sur la carte et indique le guichet. Vous choisissez ensuite comment y aller.</p>
+        <div class="puces-mini"><span>Carte OpenStreetMap</span><span>Itinéraire dans l'app</span><span>Google Maps</span><span>N° de guichet</span></div>
       </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg>
-        </div>
-        <h3>Paiement Mobile Money</h3>
-        <p>Réglez vos frais de dossier en toute sécurité via MTN MoMo ou Airtel Money. Confirmation instantanée par notification.</p>
+      <div class="tuile large apparait">
+        <div class="tuile-icone"><svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></div>
+        <h3>Paiement Mobile Money et récépissé</h3>
+        <p>Payez avec MTN MoMo ou Airtel Money. Un récépissé PDF doté d'un code QR prouve votre paiement au guichet.</p>
+        <div class="puces-mini"><span>MTN MoMo</span><span>Airtel Money</span><span>Reçu PDF + QR</span></div>
       </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
-        </div>
-        <h3>Suivi en temps réel</h3>
-        <p>Consultez l'état de votre dossier à tout moment : soumis, en traitement, convoqué, en production ou prêt à retirer.</p>
+      <div class="tuile apparait">
+        <div class="tuile-icone"><svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9M13.7 21a2 2 0 0 1-3.4 0"/></svg></div>
+        <h3>Alertes à chaque étape</h3>
+        <p>Notifications sur le téléphone, e-mail et SMS : vous savez toujours où en est votre demande.</p>
       </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>
-        </div>
-        <h3>Notifications push</h3>
-        <p>Recevez une alerte sur votre téléphone à chaque changement de statut. Soyez informé sans avoir à consulter l'application.</p>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg>
-        </div>
+      <div class="tuile apparait">
+        <div class="tuile-icone"><svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
         <h3>Messagerie avec l'agent</h3>
-        <p>Communiquez directement avec l'agent responsable de votre dossier. Posez vos questions, recevez des réponses officielles.</p>
+        <p>Échangez par texte, photo, PDF ou message vocal, directement dans votre dossier.</p>
       </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
-        </div>
-        <h3>Signalement de retard</h3>
-        <p>Votre dossier est bloqué ? Envoyez une alerte directe à l'agent concerné pour demander une intervention immédiate.</p>
+      <div class="tuile apparait">
+        <div class="tuile-icone"><svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></div>
+        <h3>Pièces en photo ou PDF</h3>
+        <p>Envoyez vos justificatifs depuis le téléphone et remplacez une pièce si l'agent vous le demande.</p>
       </div>
-    </div>
-
-    <!-- Étapes du parcours -->
-    <div style="margin-top:56px;">
-      <p class="section-label">Le parcours citoyen</p>
-      <h2 class="section-title">De la demande au retrait</h2>
-      <div class="steps">
-        <div class="step">
-          <div class="step-num">1</div>
-          <div class="step-body">
-            <h3>Inscription et dépôt de dossier</h3>
-            <p>Créez votre compte, choisissez le type de pièce (CNI, Passeport ou NIU) et envoyez vos documents justificatifs numérisés depuis votre téléphone.</p>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-num">2</div>
-          <div class="step-body">
-            <h3>Paiement sécurisé via Mobile Money</h3>
-            <p>Réglez les frais de dossier via MTN MoMo ou Airtel Money. Votre dossier est automatiquement soumis après confirmation du paiement.</p>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-num">3</div>
-          <div class="step-body">
-            <h3>Convocation pour prise d'empreintes</h3>
-            <p>L'agent vous envoie une notification de rendez-vous pour la prise de vos empreintes digitales et de votre photo biométrique à la préfecture.</p>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-num">4</div>
-          <div class="step-body">
-            <h3>Production de la pièce</h3>
-            <p>Votre pièce est produite sur le serveur local sécurisé de la préfecture, entièrement isolé d'Internet (architecture Air-Gap).</p>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-num">5</div>
-          <div class="step-body">
-            <h3>Retrait au guichet</h3>
-            <p>Vous recevez une notification push dès que votre pièce est prête. Présentez-vous au guichet pour la récupérer.</p>
-          </div>
-        </div>
+      <div class="tuile apparait">
+        <div class="tuile-icone"><svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg></div>
+        <h3>Français et anglais</h3>
+        <p>Choisissez la langue de l'application, ainsi que le thème clair ou sombre.</p>
+      </div>
+      <div class="tuile apparait">
+        <div class="tuile-icone"><svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 10a2 2 0 0 0-2 2c0 1-.1 2.5-.3 4M14 13c0 2.4 0 6.4-1 9M2 12a10 10 0 0 1 18-6M21.8 16c.2-2 .1-5.4 0-6M5 19.5C5.5 18 6 15 6 12a6 6 0 0 1 .3-2M9 6.8a6 6 0 0 1 9 5.2v2"/></svg></div>
+        <h3>Verrouillage biométrique</h3>
+        <p>Protégez l'accès à l'application par empreinte digitale ou reconnaissance faciale.</p>
+      </div>
+      <div class="tuile apparait">
+        <div class="tuile-icone"><svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-6.2-8.6"/><path d="M21 4v5h-5"/></svg></div>
+        <h3>Mot de passe oublié</h3>
+        <p>Recevez un code par e-mail pour en choisir un nouveau, en toute sécurité.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- TARIFS -->
-<section id="tarifs">
+<!-- ═══ ESPACES ═══ -->
+<section id="espaces">
   <div class="container">
-    <p class="section-label">Frais de dossier</p>
-    <h2 class="section-title">Tarifs en vigueur</h2>
-    <p class="section-desc">Les frais sont réglés une seule fois via Mobile Money lors de la soumission de votre dossier.</p>
-
-    <div class="tarifs-grid">
-      <div class="tarif-card">
-        <span class="tarif-type">CNI</span>
-        <div class="tarif-nom">Carte Nationale d'Identité</div>
-        <div class="tarif-prix">5 000</div>
-        <div class="tarif-devise">FCFA · paiement unique</div>
-        <div class="tarif-delai">Délai estimé : 15 jours ouvrables</div>
+    <div class="entete-centre">
+      <p class="sur-titre">Trois espaces</p>
+      <h2 class="section-titre">Une application, trois profils</h2>
+      <p class="section-desc">Chacun dispose de son propre espace et ne voit que ce qui le concerne.</p>
+    </div>
+    <div class="espaces">
+      <div class="espace citoyen apparait">
+        <small>Pour vous</small><h3>Espace citoyen</h3>
+        <ul>
+          <li>Dépôt des demandes de CNI, passeport et NIU</li>
+          <li>Paiement Mobile Money et récépissés</li>
+          <li>Suivi, notifications et messagerie</li>
+          <li>Carte et itinéraire vers le guichet</li>
+          <li>Profil, photo, langue et sécurité du compte</li>
+        </ul>
       </div>
-      <div class="tarif-card">
-        <span class="tarif-type">Passeport</span>
-        <div class="tarif-nom">Passeport biométrique</div>
-        <div class="tarif-prix">25 000</div>
-        <div class="tarif-devise">FCFA · paiement unique</div>
-        <div class="tarif-delai">Délai estimé : 30 jours ouvrables</div>
+      <div class="espace agent apparait">
+        <small>Pour les centres</small><h3>Espace agent</h3>
+        <ul>
+          <li>Liste des dossiers de son centre</li>
+          <li>Consultation des pièces et changement de statut</li>
+          <li>Convocations avec lieu, guichet et carte (recherche de lieu)</li>
+          <li>Indication du lieu de retrait des pièces prêtes</li>
+          <li>Messagerie avec les citoyens</li>
+        </ul>
       </div>
-      <div class="tarif-card">
-        <span class="tarif-type">NIU</span>
-        <div class="tarif-nom">Numéro d'Identification Unique</div>
-        <div class="tarif-prix">3 000</div>
-        <div class="tarif-devise">FCFA · paiement unique</div>
-        <div class="tarif-delai">Délai estimé : 10 jours ouvrables</div>
+      <div class="espace admin apparait">
+        <small>Pour la supervision</small><h3>Espace administrateur</h3>
+        <ul>
+          <li>Création et gestion des comptes agents</li>
+          <li>Suspension d'un compte en un geste</li>
+          <li>Statistiques globales en temps réel</li>
+          <li>Mode maintenance et blocage des inscriptions</li>
+        </ul>
       </div>
     </div>
-
-    <p style="margin-top:20px; font-size:0.82rem; color:var(--muted);">
-      Les frais de dossier sont fixés par les autorités compétentes de la République du Congo et peuvent être révisés. Les frais réglés sont non remboursables sauf défaillance technique avérée.
-    </p>
   </div>
 </section>
 
-<!-- SÉCURITÉ -->
-<section id="securite">
+<!-- ═══ SÉCURITÉ ═══ -->
+<section id="securite" class="section-fond">
   <div class="container">
-    <p class="section-label">Protection de vos données</p>
-    <h2 class="section-title">Vos données sont protégées</h2>
-    <p class="section-desc">EC-Civil ne vend, ne loue et ne cède jamais vos données personnelles à des tiers à des fins commerciales.</p>
-
-    <div class="securite-grid">
-      <div class="securite-item">
-        <div class="securite-dot"></div>
-        <div>
-          <h4>Mots de passe hachés</h4>
-          <p>Vos mots de passe sont hachés de façon irréversible avec bcrypt (facteur de coût 12). Personne ne peut les lire, pas même nous.</p>
-        </div>
-      </div>
-      <div class="securite-item">
-        <div class="securite-dot"></div>
-        <div>
-          <h4>Communications chiffrées</h4>
-          <p>Toutes les échanges entre votre téléphone et nos serveurs passent par HTTPS avec chiffrement TLS.</p>
-        </div>
-      </div>
-      <div class="securite-item">
-        <div class="securite-dot"></div>
-        <div>
-          <h4>Sessions limitées</h4>
-          <p>L'authentification par token JWT expire automatiquement toutes les 24 heures pour protéger votre compte.</p>
-        </div>
-      </div>
-      <div class="securite-item">
-        <div class="securite-dot"></div>
-        <div>
-          <h4>OTP via ZAVU</h4>
-          <p>La réinitialisation de mot de passe utilise un code OTP à 6 chiffres envoyé par SMS ou WhatsApp via ZAVU, valable 10 minutes.</p>
-        </div>
-      </div>
-      <div class="securite-item">
-        <div class="securite-dot"></div>
-        <div>
-          <h4>Accès restreint</h4>
-          <p>Seuls les agents habilités de la préfecture ont accès à vos données, dans le strict cadre du traitement de votre dossier.</p>
-        </div>
-      </div>
-      <div class="securite-item">
-        <div class="securite-dot"></div>
-        <div>
-          <h4>Journal d'audit</h4>
-          <p>Chaque action sur votre dossier est horodatée et tracée dans un journal sécurisé pour garantir la transparence.</p>
-        </div>
-      </div>
+    <p class="sur-titre">Protection de vos données</p>
+    <h2 class="section-titre">Vos données sont en sécurité</h2>
+    <p class="section-desc">EC-Civil ne vend, ne loue et ne cède jamais vos données personnelles. Leur protection a été prévue dès la conception.</p>
+    <div class="securite-grille">
+      <div class="securite-item apparait"><h4><svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Mots de passe illisibles</h4><p>Ils sont transformés de façon irréversible (bcrypt) : personne ne peut les lire, pas même nous.</p></div>
+      <div class="securite-item apparait"><h4><svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="m4 4 8 8 8-8"/></svg>E-mail vérifié</h4><p>Chaque compte est activé par un code envoyé à son adresse : personne ne peut s'inscrire à votre place.</p></div>
+      <div class="securite-item apparait"><h4><svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Anti-piratage</h4><p>Après plusieurs mots de passe erronés, l'accès est temporisé et une vérification anti-robots est demandée.</p></div>
+      <div class="securite-item apparait"><h4><svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Sessions qui expirent</h4><p>Votre connexion se renouvelle automatiquement et s'arrête sur tous vos appareils si vous changez de mot de passe.</p></div>
+      <div class="securite-item apparait"><h4><svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>Échanges chiffrés</h4><p>Toutes les communications passent par HTTPS. Vos fichiers sont contrôlés et stockés de façon sécurisée.</p></div>
+      <div class="securite-item apparait"><h4><svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>Traçabilité</h4><p>Chaque action sur votre dossier est datée et historisée ; seuls les agents habilités y ont accès.</p></div>
     </div>
-
-    <div class="airgap-banner">
-      <div class="airgap-icon">🔒</div>
-      <div class="airgap-content">
-        <h3>Architecture Air-Gap — Vos données biométriques ne touchent jamais Internet</h3>
-        <p>La production de vos pièces civiles et le traitement de vos empreintes digitales se font exclusivement sur un serveur local physiquement isolé d'Internet, installé en préfecture. Aucune donnée biométrique ne transite par le réseau. L'agent humain est le seul lien entre le monde numérique et le système de production sécurisé.</p>
+    <div class="bandeau-airgap apparait">
+      <div class="ic"><svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4M2 3l20 14"/></svg></div>
+      <div>
+        <h3>Vos données biométriques ne transitent pas par Internet</h3>
+        <p>Les empreintes sont relevées au guichet et la production des pièces se fait sur un serveur local de la préfecture, isolé d'Internet. L'application sert à déposer, payer et suivre : jamais à transmettre vos empreintes.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact">
+<!-- ═══ FAQ ═══ -->
+<section id="faq">
   <div class="container">
-    <p class="section-label">Une question ?</p>
-    <h2 class="section-title">Contactez-nous</h2>
-    <p class="section-desc">EC-Civil est développée et opérée depuis Brazzaville, République du Congo.</p>
-
-    <div class="contact-grid">
-      <div class="contact-card">
-        <div class="contact-card-icon">
-          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-        </div>
-        <div>
-          <h4>Aide et support</h4>
-          <a href="mailto:support@eccivil.cg">support@eccivil.cg</a>
-        </div>
-      </div>
-      <div class="contact-card">
-        <div class="contact-card-icon">
-          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
-        </div>
-        <div>
-          <h4>Données personnelles</h4>
-          <a href="mailto:privacy@eccivil.cg">privacy@eccivil.cg</a>
-        </div>
-      </div>
-      <div class="contact-card">
-        <div class="contact-card-icon">
-          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-        </div>
-        <div>
-          <h4>Adresse</h4>
-          <a href="#">Brazzaville, République du Congo</a>
-        </div>
-      </div>
+    <div class="entete-centre">
+      <p class="sur-titre">Questions fréquentes</p>
+      <h2 class="section-titre">Tout ce qu'il faut savoir</h2>
+      <p class="section-desc">Vous ne trouvez pas votre réponse&nbsp;? Contactez-nous par téléphone, WhatsApp ou e-mail.</p>
     </div>
-
-    <div style="margin-top:32px; padding:24px; background:var(--vert-clair); border-radius:var(--radius-lg); border:1.5px solid var(--gris-bord);">
-      <p style="font-size:0.9rem; color:var(--texte);">
-        Pour consulter nos documents légaux complets, les conditions d'utilisation et la politique de confidentialité, rendez-vous sur la page dédiée.
-      </p>
-      <a href="legal.html" style="display:inline-block; margin-top:14px; padding:10px 22px; background:var(--vert); color:#fff; border-radius:10px; text-decoration:none; font-size:0.88rem; font-weight:600;">
-        Lire les documents légaux →
-      </a>
+    <div class="faq">
+      <details class="apparait"><summary>Dois-je encore me déplacer au centre ?</summary><p>Oui, deux fois seulement : pour la prise de vos empreintes et de votre photo (CNI et passeport), puis pour retirer votre pièce. Le NIU ne demande pas de biométrie. Tout le reste se fait depuis votre téléphone.</p></details>
+      <details class="apparait"><summary>Combien vais-je payer au total ?</summary><p>Le prix de la pièce plus 100 FCFA de frais de service : 5 100 FCFA pour la CNI, 50 100 FCFA pour le passeport et 2 100 FCFA pour le NIU. Le paiement se fait en une seule fois, au dépôt du dossier.</p></details>
+      <details class="apparait"><summary>Comment savoir où et quand me présenter ?</summary><p>Lorsque l'agent vous convoque, vous recevez une notification avec la date, l'heure, le centre et le numéro de guichet. Le lieu s'affiche sur une carte : touchez « Itinéraire » pour le trajet dans l'application, ou « Google Maps » pour être guidé(e) vocalement.</p></details>
+      <details class="apparait"><summary>Je n'ai pas reçu le code d'activation par e-mail.</summary><p>Vérifiez vos courriers indésirables (spams), puis utilisez « Renvoyer le code » sur l'écran d'activation. Si le problème persiste, contactez-nous en indiquant l'adresse e-mail utilisée.</p></details>
+      <details class="apparait"><summary>L'agent me signale une pièce manquante ou illisible.</summary><p>Ouvrez votre dossier, puis remplacez la pièce concernée en photo ou en PDF. Vous pouvez aussi écrire à l'agent dans la messagerie du dossier.</p></details>
+      <details class="apparait"><summary>Mon dossier a été rejeté : que faire ?</summary><p>Le motif du rejet est toujours indiqué dans l'application. Corrigez le point signalé, puis échangez avec l'agent par la messagerie pour la suite de la démarche.</p></details>
+      <details class="apparait"><summary>J'ai oublié mon mot de passe.</summary><p>Sur l'écran de connexion, touchez « Mot de passe oublié ? ». Un code à 6 chiffres vous est envoyé par e-mail pour choisir un nouveau mot de passe.</p></details>
+      <details class="apparait"><summary>Mes paiements sont-ils remboursables ?</summary><p>Non, sauf défaillance technique avérée du système de paiement. Votre récépissé PDF reste disponible dans l'application comme preuve de paiement.</p></details>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ═══ CONTACT ═══ -->
+<section id="contact" class="section-fond">
+  <div class="container">
+    <div class="contact-bloc apparait">
+      <div>
+        <p class="sur-titre">Contact</p>
+        <h2 class="section-titre">Une question&nbsp;? Parlons-en.</h2>
+        <p class="section-desc">Pour toute question sur l'application, un dossier ou un partenariat, contactez directement l'équipe EC-Civil à Brazzaville.</p>
+        <a href="https://wa.me/242067044477" class="btn btn-or" target="_blank" rel="noopener">
+          Écrire sur WhatsApp
+          <svg fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+      <div class="contact-liste">
+        <a class="contact-carte" href="tel:+242067044477">
+          <span class="ic ic-vert"><svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span>
+          <span><small>Téléphone</small><b>+242 06 704 44 77</b></span>
+        </a>
+        <a class="contact-carte" href="https://wa.me/242067044477" target="_blank" rel="noopener">
+          <span class="ic ic-or"><svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M3 21l1.7-5A9 9 0 1 1 8 19.3z"/><path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1"/></svg></span>
+          <span><small>WhatsApp</small><b>06 704 44 77</b></span>
+        </a>
+        <a class="contact-carte" href="mailto:sabrinamoussounda682@gmail.com">
+          <span class="ic ic-rouge"><svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
+          <span><small>E-mail</small><b>sabrinamoussounda682@gmail.com</b></span>
+        </a>
+        <div class="contact-carte" style="cursor:default">
+          <span class="ic ic-vert"><svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+          <span><small>Adresse</small><b>Brazzaville, République du Congo</b></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PIED DE PAGE ═══ -->
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
-      <img src="assets/img/logo.webp" alt="EC-Civil logo">
-      <p>Application mobile de suivi des pièces civiles en République du Congo. CNI, Passeport, NIU.</p>
+      <img src="assets/img/logo.png" alt="Logo EC-Civil">
+      <p>EC-Civil : la demande et le suivi de vos pièces d'identité (CNI, passeport, NIU) depuis votre téléphone, en République du Congo.</p>
     </div>
     <div class="footer-col">
       <h4>Navigation</h4>
       <ul>
         <li><a href="#fonctionnement">Fonctionnement</a></li>
         <li><a href="#tarifs">Tarifs</a></li>
-        <li><a href="#securite">Sécurité</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#fonctionnalites">Fonctionnalités</a></li>
+        <li><a href="#faq">Questions fréquentes</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Légal</h4>
+      <h4>Contact &amp; légal</h4>
       <ul>
+        <li><a href="tel:+242067044477">+242 06 704 44 77</a></li>
+        <li><a href="mailto:sabrinamoussounda682@gmail.com">sabrinamoussounda682@gmail.com</a></li>
         <li><a href="legal.html?doc=cgu">Conditions d'utilisation</a></li>
         <li><a href="legal.html?doc=confidentialite">Politique de confidentialité</a></li>
-        <li><a href="mailto:support@eccivil.cg">support@eccivil.cg</a></li>
       </ul>
     </div>
   </div>
-  <div class="footer-bottom container">
-    <p>© 2025 EC-Civil — Tous droits réservés. Brazzaville, République du Congo.</p>
-    <p><a href="legal.html" style="color:rgba(255,255,255,0.4); text-decoration:none;">Documents légaux</a></p>
+  <div class="footer-bottom">
+    <p>© <span id="annee">2026</span> EC-Civil — Brazzaville, République du Congo.</p>
+    <p><a href="legal.html">Documents légaux</a></p>
   </div>
   <div class="footer-tricolor"></div>
 </footer>
